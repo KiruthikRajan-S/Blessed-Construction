@@ -445,6 +445,24 @@
   }
 </style>
 
+<script>
+    function toggleMenu(event) {
+      event.stopPropagation();
+      document.getElementById("menu").classList.toggle("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("menu").classList.remove("active");
+    }
+
+    document.addEventListener("click", function(event) {
+      if (!document.getElementById("menu").contains(event.target) && 
+          !document.querySelector(".menu-toggle").contains(event.target)) {
+        closeMenu();
+      }
+    });
+  </script>
+
 
 </body>
 </html>
