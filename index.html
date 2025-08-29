@@ -215,6 +215,9 @@
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* Firefox fallback using masking */
+  background-clip: text;  /* standard (some Firefox versions) */
+  color: transparent;     /* fallback color */
   animation: luxuryMove 10s ease infinite;
 }
 

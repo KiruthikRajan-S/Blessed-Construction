@@ -218,16 +218,28 @@ html, body {
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  /* Gradient background */
   background: linear-gradient(90deg, #ffae00, #ff4b1f, #ffae00);
+  background-size: 200% auto;
+
+  /* Chrome, Safari, Edge */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
+
+  /* Firefox fallback */
+  background-clip: text;
+  color: transparent;
+
+  /* Animation */
   animation: gradientFlow 5s linear infinite, fadeDown 1.2s ease forwards;
+
   opacity: 0;
   transform: translateY(-30px);
   cursor: pointer;
   transition: transform 0.4s ease, letter-spacing 0.4s ease;
 }
+
 
 /* Hover effect for H1 */
 .services-left h1:hover {
